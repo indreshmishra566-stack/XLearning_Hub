@@ -455,7 +455,6 @@ function TopicCard({ topic, index, onClick }) {
   const hasCommands = topic.sections.some((section) =>
     section.title.includes('Command Center') || section.title.includes('Commands')
   );
-  const phaseCount = new Set(topic.sections.map((section) => section.phase).filter(Boolean)).size;
 
   return (
     <div
