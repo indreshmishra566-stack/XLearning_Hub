@@ -338,7 +338,6 @@ function App() {
                       <span className="section-emoji">{sectionIcon(section.phase)}</span>
                       <span className="section-text">
                         <span className="section-btn-title">{section.title}</span>
-                        <span className="section-btn-sub">{section.phase || 'Lesson'}</span>
                       </span>
                     </button>
                   );
@@ -383,7 +382,6 @@ function App() {
                       >
                         ← Previous
                       </button>
-                      <span>{selectedSection.phase || 'Lesson'}</span>
                       <button
                         onClick={() => handleSectionStep(1)}
                         disabled={
@@ -472,12 +470,10 @@ function TopicCard({ topic, index, onClick }) {
       <span className="card-icon">{topic.icon}</span>
       <div className="card-header">
         <span className="card-name">{topic.name}</span>
-        <span className="card-status">{topic.level || 'Ready'}</span>
       </div>
       <p className="card-desc">{topic.desc}</p>
       <div className="card-footer">
         <span>{topic.sections.length} lessons</span>
-        <span>{phaseCount || 1} phases</span>
         {hasCommands && <span>Commands</span>}
       </div>
       <div className="card-action">
